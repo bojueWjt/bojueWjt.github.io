@@ -63,6 +63,10 @@
 		ctx.drawImage(backgroundImg,(600-canvasWidth)/2,0,canvasWidth,canvasHeight,0,0,canvasWidth,canvasHeight);
 		ctx.drawImage(logoImg,10,10,283,50);
 
+		ctx.fillStyle = "#fff";
+		ctx.font = "15px Microsoft YaHei";
+		ctx.fillText("比技术，我们就没怕过谁。",30,80);
+
 		drawSmoke();
 
 	}
