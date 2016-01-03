@@ -60,7 +60,7 @@
 
 		ctx.fillStyle = "#f9f2d6";
 		ctx.fillRect(0,0,canvasWidth,canvasHeight);
-		// ctx.drawImage(backgroundImg,(600-canvasWidth)/2,0,canvasWidth,canvasHeight,0,0,canvasWidth,canvasHeight);
+		ctx.drawImage(backgroundImg,(600-canvasWidth)/2,0,canvasWidth,canvasHeight,0,0,canvasWidth,canvasHeight);
 		ctx.drawImage(logoImg,10,10,200,50);
 
 		drawSmoke();
