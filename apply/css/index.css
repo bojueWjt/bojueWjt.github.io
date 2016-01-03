@@ -26,7 +26,7 @@ nav ul li.active {
     min-height:100%;
     height:auto
 }
-.content {
+#container section.content {
     padding-top:50px;
     background:#fff;
     border-radius:5px;
@@ -114,7 +114,7 @@ footer {
     font-size:.5em;
     bottom:0;
     line-height:50px;
-    color:#C5C5C5
+    color:#969696;
 }
 .wrap {
     margin:66% auto;
@@ -388,3 +388,113 @@ footer {
     padding:0 2%;
     padding-bottom:50px
 }
+
+#page02 {
+    padding-bottom: 50px;
+}
+
+.conversation {
+    background: #f2f2f2;
+    margin-left: 2%;
+    width: 92%;
+    padding: 2%;
+    margin-top: 40px;
+    padding-bottom: 50px;
+}
+
+
+.conversation .headimg {
+    width: 45px;
+    height: 45px;
+    background: #eee;
+    display: inline-block;
+    vertical-align: top;
+
+}
+
+.conversation .info {
+    display: inline-block;
+    width: 67%;
+}
+
+.ajun .headimg {
+    background: url(../img/ajun.jpg);
+    margin-right: 6px;
+}
+
+.conversation .author {
+    display: block;
+    margin-top: 7px;
+    color: #B9B9B9;
+}
+
+.conversation .info .content{
+    font-size: 1.0em;
+    background: #fff;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+    padding: 8px;
+    word-break:break-all;
+}
+
+.ajun .info .content::before {
+    margin-left: -13px;
+    background: #fff;
+    transform: rotateZ(45deg);
+    -webkit-transform: rotateZ(45deg);
+    -moz-transform: rotateZ(45deg);
+    -ms-transform: rotateZ(45deg);
+    -o-transform: rotateZ(45deg);
+    display: block;
+    content: "";
+    width: 8px;
+    height: 8px;
+    border: 1px solid #ccc;
+    border-color: transparent transparent #ccc #ccc;
+    position: absolute;
+
+}
+
+
+.superGG .headimg {
+    background: url(../img/superGG.jpg);
+    margin-left: 6px;
+}
+
+.superGG {
+    text-align: right;
+}
+
+.ajun,.superGG {
+    margin-top: 10px;
+}
+
+.superGG .info .content {
+    text-align: left;
+    background: rgb(179,232,110);
+
+}
+
+.superGG .headimg::before{
+    margin-left: -15px;
+    background: #fff;
+    transform: rotateZ(45deg);
+    -webkit-transform: rotateZ(45deg);
+    -moz-transform: rotateZ(45deg);
+    -ms-transform: rotateZ(45deg);
+    -o-transform: rotateZ(45deg);
+    display: block;
+    content: "";
+    width: 8px;
+    height: 8px;
+    border: 1px solid #ccc;
+    border-color: #ccc #ccc transparent transparent;
+    position: absolute;
+    margin-top: 38px;
+    background: rgb(179,232,110);
+
+}
+
+
+
+
