@@ -385,10 +385,17 @@ footer {
 }
 #page03 {
     display:none;
-    padding:0 2%;
+    padding:0 5%;
     padding-bottom:50px
 }
 
+#page03 p {
+	line-height: 30px;
+}
+
+#page03 img {
+	vertical-align: middle;
+}
 #page02 {
     padding-bottom: 50px;
 }
