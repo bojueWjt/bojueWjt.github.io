@@ -153,7 +153,7 @@
         };
         xhr.open("POST", url, true);
 
-        xmlhttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+        xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
 
         showShade();
         xhr.send(param);
