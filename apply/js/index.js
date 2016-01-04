@@ -124,7 +124,9 @@
     };
     var submit = function() {
         var params = getForm();
-        var url = createUrl(params);
+        var array = createUrl(params).split("?");
+        var url = array[0];
+        var param = array[1];
         var xhr = new XMLHttpRequest();
         xhr.onreadystatechange = function() {
             if (xhr.readyState == 4) {
@@ -139,19 +141,22 @@
                     	document.getElementById("page00").style.display = "block";
                         document.getElementById("page01").style.display = "none"
                         document.getElementsByClassName("result-info")[0].innerHTML = data.resultInfo;
-                        document.getElementById("result-info").src = "img/iconfont-error.png"
+                        document.getElementById("result-logo").src = "img/iconfont-error.png"
                     }
                 } else {
                 	document.getElementById("page00").style.display = "block";
                         document.getElementById("page01").style.display = "none";
                     document.getElementsByClassName("result-info")[0].innerHTML = "服务器错误，请稍后再试！^_^||| ";
-                    document.getElementById("result-info").src = "img/iconfont-error.png"
+                    document.getElementById("result-logo").src = "img/iconfont-error.png"
                 }
             }
         };
-        xhr.open("GET", url, true);
+        xhr.open("POST", url, true);
+
+        xmlhttp.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+
         showShade();
-        xhr.send(null);
+        xhr.send(param);
         initForm()
     };
     var initForm = function() {
