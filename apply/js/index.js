@@ -154,6 +154,7 @@
         xhr.open("POST", url, true);
 
         xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+        xhr.setRequestHeader("Charset","utf-8");
 
         showShade();
         xhr.send(param);
