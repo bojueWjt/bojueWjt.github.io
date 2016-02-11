@@ -1,1 +1,6 @@
-##hello world
+---
+layout: post
+---
+
+## hello world
+#hello
