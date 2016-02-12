@@ -9,7 +9,9 @@ dl, dd, ol, ul, figure {
 }
 
 
-
+html {
+    height:100%;
+}
 /**
  * Basic styling
  */
@@ -23,6 +25,10 @@ body {
     -o-font-feature-settings: "kern" 1;
     font-feature-settings: "kern" 1;
     font-kerning: normal;
+
+
+    min-height: 100%;
+    position: relative;
 }
 
 
@@ -201,6 +207,16 @@ pre {
 
         path {
             fill: $grey-color;
+        }
+    }
+}
+
+.site-footer .icon {
+
+    > svg {
+
+        path {
+            fill: $white-color;
         }
     }
 }

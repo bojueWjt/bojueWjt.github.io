@@ -2,12 +2,12 @@
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">{{ site.title }}</h2>
+    <!-- <h2 class="footer-heading">{{ site.title }}</h2> -->
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
         <ul class="contact-list">
-          <li>{{ site.title }}</li>
+          <li>我的邮箱</li>
           <li><a href="mailto:{{ site.email }}">{{ site.email }}</a></li>
         </ul>
       </div>
@@ -20,19 +20,19 @@
           </li>
           {% endif %}
 
-          {% if site.twitter_username %}
+          {% if site.zhihu.username %}
           <li>
-            {% include icon-twitter.html username=site.twitter_username %}
+            {% include icon-zhihu.html info=site.zhihu %}
           </li>
           {% endif %}
         </ul>
       </div>
 
-      <div class="footer-col footer-col-3">
+      <!-- <div class="footer-col footer-col-3">
         <p>{{ site.description }}</p>
-      </div>
+      </div> -->
     </div>
-
+    
   </div>
 
 </footer>
