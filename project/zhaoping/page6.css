@@ -1,0 +1,44 @@
+
+.wrapper .p6{
+	background: url(img/p6_bg.png);
+	background-size: cover;
+	-webkit-background-size: cover;
+	z-index: -2;
+	display: none;
+}
+
+.wrapper .p6 .info{
+	position: absolute;
+	top: 42vh;
+	left: 8vh;
+}
+
+.wrapper .p6 .info p:nth-child(2){
+	text-indent: 10px;
+}
+
+.wrapper #showp6 .info {
+	animation: intoLinkScale 3s linear infinite;
+	-webkit-animation:intoLinkScale 3s linear infinite;
+}
+
+.wrapper .p6 .info p{
+	font-size: 5.2vh;
+	color: #FFF;
+	font-weight: 200;
+}
+
+.wrapper .p6 .hand1{
+	position: absolute;
+	top: 64vh;
+	left: 30vh;
+	width: 59%;
+}
+
+
+.wrapper .p6 .hand2{
+	width: 44vh;
+	position: absolute;
+	top: -1vh;
+	left: -14vh;
+}

@@ -1,0 +1,368 @@
+.wrapper .p2{
+	background: url(img/p2_bg.png);
+	-webkit-background-size: cover;
+	background-size: cover;
+	z-index: -2;
+	display: none;
+}
+
+.wrapper .p2 .info ul{
+	margin: 4% 0 0 4%;
+}
+
+.wrapper #showp2 .info ul li:nth-child(1){
+	animation: fontAnim1 1s linear 1 forwards;
+	-webkit-animation: fontAnim1 1s linear 1 forwards;
+}
+
+.wrapper .p2 .info ul li:nth-child(1){
+	opacity: 0;
+	font-size: 4vh;
+	color: #fff;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+	font-weight: lighter;
+}
+
+.wrapper #showp2 .info ul li:nth-child(2),
+.wrapper #showp2 .info ul li:nth-child(3){
+	animation: fontAnim1 1s linear 1 1.6s forwards;
+	-webkit-animation: fontAnim1 1s linear 1 1.6s forwards;
+}
+
+.wrapper .p2 .info ul li:nth-child(2),
+.wrapper .p2 .info ul li:nth-child(3){
+	font-size: 2vh;
+	color: #fff;
+	opacity: 0;
+	font-weight: lighter;
+	text-indent: 2.7%;
+}
+
+.wrapper #showp2 .bd{
+	animation: fontAnim1 1s linear 1 0.8s forwards;
+	-webkit-animation: fontAnim1 1s linear 1 0.8s forwards;
+}
+
+.wrapper .p2 .bd{
+	height: 5%;
+	opacity: 0;
+	width: 0.5%;
+	position: absolute;
+	top: 8%;
+	left: 5%;
+	background: #FFF;
+}
+
+.wrapper .p2 .icons ul{
+	text-align: center;
+	text-indent: -9%;
+	margin-top: 66%;
+}
+
+.wrapper .p2 .icons ul li{
+	display: inline-block;
+	width: 15%;
+}
+
+.wrapper #showp2 .icons ul li:nth-child(1){
+	animation: aiAnima 4s ease-out 1 3.5s forwards;
+	-webkit-animation: aiAnima 4s ease-out 1 3.5s forwards;
+}
+
+
+.wrapper #showp2 .icons ul li:nth-child(2){
+	animation: psAnima 4s ease-out 1 3.5s forwards;
+	-webkit-animation: psAnima 4s ease-out 1 3.5s forwards;
+}
+
+.wrapper #showp2 .icons ul li:nth-child(3){
+	animation: flAnima 4s ease-out 1 3.5s forwards;
+	-webkit-animation: flAnima 4s ease-out 1 3.5s forwards;
+}
+
+.wrapper #showp2 .icons ul li:nth-child(4){
+	animation: gameAnima 4s ease-out 1 3.5s forwards;
+	-webkit-animation: gameAnima 4s ease-out 1 3.5s forwards;
+}
+
+.wrapper .p2 .icons ul li:nth-child(4){
+	z-index: 2;
+	position: absolute;
+}
+
+.wrapper .p2 .icons ul li img{
+	width: 100%;
+	max-width: 60px;
+}
+
+.wrapper #showp2 .hand{
+	animation: handShow 0.5s ease-out 1 3s forwards;
+	-webkit-animation: handShow 0.5s ease-out 1 3s forwards;
+}
+
+.wrapper .p2 .hand{
+	margin-top: 0px;
+	position: absolute;
+	top: 33%;
+	left: 28%;
+	z-index: -2;
+	width: 44%;
+	opacity: 0;
+}
+
+.wrapper .p2 .hand img{
+	width: 100%;
+	max-width: 150px;
+}
+
+.wrapper #showp2 .cloudsbg{
+	animation: cloudsbg 1s ease-in-out 1 3.2s forwards;
+	-webkit-animation: cloudsbg 1s ease-in-out 1 3.2s forwards;
+}
+
+.wrapper .p2 .cloudsbg{
+	position: absolute;
+	top: 43%;
+	left: 11%;
+	width: 78%;
+	opacity: 0;
+	
+}
+
+.wrapper #showp2 .cloudsbg img{
+	animation: intoLinkScale 1s ease-in-out 5 4s forwards;
+	-webkit-animation: intoLinkScale 1s ease-in-out 5 4s forwards;
+}
+
+.wrapper .p2 .cloudsbg img{
+	width: 100%;
+	max-width: 290px;
+}
+
+.wrapper #showp2 .clouds1{
+	animation: clouds1Anima 10s linear 1 3.8s forwards;
+	-webkit-animation: clouds1Anima 10s linear 1 3.8s forwards;
+}
+
+.wrapper .p2 .clouds1 {
+	width: 49%;
+	position: absolute;
+	opacity: 0;
+	top: 42%;
+	left: 16%;
+}
+
+
+
+
+.wrapper .p2 .clouds1 img{
+	width: 100%;
+	max-width: 210px;
+}
+
+
+@-webkit-keyframes 'cloudsbg'{
+	0%{
+		opacity: 0;
+		-webkit-transform:scale(0);
+	}
+	50%{
+		opacity: 1;
+		-webkit-transform:scale(1.5);
+	}
+	70%{
+		opacity: 0;
+		-webkit-transform:scale(0.8);		
+	}
+	100%{
+		opacity: 1;
+		-webkit-transform:scale(1);	
+	}
+}
+
+@-webkit-keyframes 'handShow' {
+	0%{
+		opacity: 0;
+		-webkit-transform: translateY(800px);
+	}
+
+	100%{
+		opacity: 1;
+		-webkit-transform: translateY(0px);
+	}
+}
+
+@-webkit-keyframes 'aiAnima'{
+	0%{
+		-webkit-transform: translate(0px) rotate(0deg);
+	}
+
+	1%{
+		-webkit-transform: rotate(39deg) translate(-65px);
+	}
+
+	100%{
+		-webkit-transform: rotate(39deg) translate(-100px);
+	}
+}
+
+@-webkit-keyframes 'psAnima'{
+	0%{
+		-webkit-transform: translate(0px) rotate(0deg);
+	}
+
+	1%{
+		-webkit-transform: rotate(-29deg) translate(7px,-155px);
+	}
+
+	100%{
+		-webkit-transform: rotate(-29deg) translate(10px,-200px);
+	}
+}
+
+@-webkit-keyframes 'flAnima'{
+	0%{
+		-webkit-transform: translate(0px) rotate(0deg);
+	}
+
+	1%{
+		-webkit-transform: rotate(15deg) translate(30px,-100px);
+	}
+
+	100%{
+		-webkit-transform: rotate(15deg) translate(50px,-200px);
+	}
+}
+
+@-webkit-keyframes 'gameAnima'{
+	0%{
+		-webkit-transform: translate(0px) rotate(0deg);
+	}
+
+	1%{
+		-webkit-transform: rotate(-23deg) translate(-57px);
+	}
+
+	100%{
+		-webkit-transform: rotate(-23deg) translate(-87px);
+	}
+}
+
+@-webkit-keyframes 'clouds1Anima'{
+	0%{
+		opacity:0;
+		-webkit-transform: translateX(-10px) ;
+	}
+	10%{
+		opacity:1;
+		-webkit-transform: translateX(-20px) ;
+	}
+
+	100%{
+		opacity:1;
+		-webkit-transform: translateX(-100px) ;
+	}
+}
+
+@keyframes 'cloudsbg'{
+	0%{
+		opacity: 0;
+		transform:scale(0);
+	}
+	50%{
+		opacity: 1;
+		transform:scale(1.5);
+	}
+	70%{
+		opacity: 0;
+		transform:scale(0.8);		
+	}
+	100%{
+		opacity: 1;
+		transform:scale(1);	
+	}
+}
+
+@keyframes 'handShow' {
+	0%{
+		opacity: 0;
+		transform: translateY(800px);
+	}
+
+	100%{
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+@keyframes 'aiAnima'{
+	0%{
+		transform: translate(0px) rotate(0deg);
+	}
+
+	1%{
+		transform: rotate(39deg) translate(-65px);
+	}
+
+	100%{
+		transform: rotate(39deg) translate(-100px);
+	}
+}
+
+@keyframes 'psAnima'{
+	0%{
+		transform: translate(0px) rotate(0deg);
+	}
+
+	1%{
+		transform: rotate(-29deg) translate(7px,-155px);
+	}
+
+	100%{
+		transform: rotate(-29deg) translate(10px,-200px);
+	}
+}
+
+@keyframes 'flAnima'{
+	0%{
+		transform: translate(0px) rotate(0deg);
+	}
+
+	1%{
+		transform: rotate(15deg) translate(30px,-100px);
+	}
+
+	100%{
+		transform: rotate(15deg) translate(50px,-200px);
+	}
+}
+
+@keyframes 'gameAnima'{
+	0%{
+		transform: translate(0px) rotate(0deg);
+	}
+
+	1%{
+		transform: rotate(-23deg) translate(-57px);
+	}
+
+	100%{
+		transform: rotate(-23deg) translate(-87px);
+	}
+}
+
+@keyframes 'clouds1Anima'{
+	0%{
+		opacity:0;
+		transform: translateX(-10px) ;
+	}
+	10%{
+		opacity:1;
+		transform: translateX(-20px) ;
+	}
+
+	100%{
+		opacity:1;
+		transform: translateX(-100px) ;
+	}
+}
