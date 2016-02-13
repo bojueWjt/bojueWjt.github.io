@@ -2,35 +2,6 @@
 layout: page
 ---
 
-<script>
-
-var paramArr = window.location.href.split("?")[1].split("=");
-var param = {};
-param[paramArr[0]] = paramArr[1];
-
-function isPhone() {
-    var sUserAgent = navigator.userAgent.toLowerCase();
-    var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
-    var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
-    var bIsMidp = sUserAgent.match(/midp/i) == "midp";
-    var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
-    var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
-    var bIsAndroid = sUserAgent.match(/android/i) == "android";
-    var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
-    var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-    if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
-        return true;
-    } else {
-        return false;
-    }
-}
-
-if(isPhone()){
-
-    window.location.href = "http://ninico.top/project/" + param.projectName;
-}
-
-</script>
 
 <div class="phone-model">
     <img src="../img/status-bar.png" class="status-bar">
@@ -39,30 +10,74 @@ if(isPhone()){
     </div>
     
 </div>
-<div class="show-nav-bar">
+<div class="show-nav-bar" style="display:none">
     <span id="pre-button" class="show-page-bar">上一页</span>
     <span id="next-button" class="show-page-bar">下一页</span>
 </div>
 <script>
     (function(){
 
-        document.getElementById("show-iframe").src = "zhaoping/";
+        var paramArr = window.location.href.split("?")[1].split("=");
+        var param = {};
+        param[paramArr[0]] = paramArr[1];
 
-        document.getElementById("pre-button").onclick = function(e){
-
-            var iframewindow = showiframe.window;
-
-            iframewindow.toPerPage();
-        };
-
-        document.getElementById("next-button").onclick = function(e){
-
-            var iframewindow = showiframe.window;
-
-            iframewindow.toNextPage();
+        function isPhone() {
+            var sUserAgent = navigator.userAgent.toLowerCase();
+            var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+            var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+            var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+            var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+            var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+            var bIsAndroid = sUserAgent.match(/android/i) == "android";
+            var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+            var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+            if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+                return true;
+            } else {
+                return false;
+            }
         }
 
-    })()
+        if(isPhone()){
+
+            window.location.href = "http://ninico.top/project/" + param.projectName;
+        }else{
+
+            $.get({
+                url:"projectParamConfig.json"
+            }).success(function(data){
+
+                var projectInfo = data[param.projectName];
+                console.log(projectInfo);
+
+                $("#show-iframe").attr("src",projectInfo.url)
+
+                if(param.projectName === "zhaoping"){
+
+                    $(".show-nav-bar").show();
+
+                    document.getElementById("pre-button").onclick = function(e){
+
+                        var iframewindow = showiframe.window;
+
+                        iframewindow.toPerPage();
+                    };
+
+                    document.getElementById("next-button").onclick = function(e){
+
+                        var iframewindow = showiframe.window;
+
+                        iframewindow.toNextPage();
+                    }
+                }
+
+                $(".post-title").html(projectInfo.title);
+                $(".post-content").prepend("<p>" + projectInfo.description + "</p>")
+
+            })
+        }
+
+    })();
 
 
 </script>
