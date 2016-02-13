@@ -3,5 +3,10 @@
 		"url":"zhaoping/",
 		"title":"视觉创意公司招聘的H5宣传页面",
 		"description":"<strong>若在电脑端浏览，仅支持webkit内核的浏览器。</strong>这个demo，使用css3实现动画效果，js做页面的滑动控制，手机浏览时，可以左右滑动翻页。"
+	},
+	"zhaoxin":{
+		"url":"zhaoxin/",
+		"title":"一个社团招新的报名页面",
+		"description":"下雪的效果是使用原生js实现的，和使用tree.js实现不同，不依赖库，比较适用在移动页面。还有使用css画出的微信聊天界面。有兴趣可以在 <strong>project/zhaoxin</strong> 下查看源码。"
 	}
 }

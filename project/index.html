@@ -38,6 +38,7 @@ layout: page
             }
         }
 
+
         if(isPhone()){
 
             window.location.href = "http://ninico.top/project/" + param.projectName;
@@ -46,6 +47,8 @@ layout: page
             $.get({
                 url:"projectParamConfig.json"
             }).success(function(data){
+
+                console.log(data);
 
                 var projectInfo = data[param.projectName];
                 console.log(projectInfo);
