@@ -48,10 +48,8 @@ layout: page
                 url:"projectParamConfig.json"
             }).success(function(data){
 
-                console.log(data);
 
                 var projectInfo = data[param.projectName];
-                console.log(projectInfo);
 
                 $("#show-iframe").attr("src",projectInfo.url)
 
