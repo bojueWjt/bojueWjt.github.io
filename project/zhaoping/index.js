@@ -1,3 +1,4 @@
+
 (function(){
 	/**
 	 * [touchEvent 存储触屏滑动事件的信息]
@@ -77,7 +78,7 @@
 			}else{
 				flag = true;
 			}
-
+		console.log(flag);
 		return flag;
  	}
 
