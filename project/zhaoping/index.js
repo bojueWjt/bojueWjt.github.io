@@ -1,5 +1,5 @@
 
-(function(){
+(function(window){
 	/**
 	 * [touchEvent 存储触屏滑动事件的信息]
 	 * @type {Object}
@@ -78,7 +78,7 @@
 			}else{
 				flag = true;
 			}
-		console.log(flag);
+		
 		return flag;
  	}
 
@@ -129,6 +129,8 @@
 		
 	}
 
+	window.toNextPage = toNextPage;
+
 	var toPerPageLisHander = function(){
 		var perPage = pages.getPageArr()[pages.getPageNum()-2];
 		this.style.display = 'none';
@@ -156,4 +158,6 @@
 		console.log(perPage.style.display);
 	}
 
-})();
+	window.toPerPage = toPerPage;
+
+})(window);

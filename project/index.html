@@ -35,11 +35,34 @@ if(isPhone()){
 <div class="phone-model">
     <img src="../img/status-bar.png" class="status-bar">
     <div class="show-window">
-        <iframe id="show-iframe" frameborder="0"></iframe>
+        <iframe id="show-iframe" name="showiframe" frameborder="0"></iframe>
     </div>
-</div>
-
-<script>
     
-    document.getElementById("show-iframe").src = "zhaoping/";
+</div>
+<div class="show-nav-bar">
+    <span id="pre-button" class="show-page-bar">上一页</span>
+    <span id="next-button" class="show-page-bar">下一页</span>
+</div>
+<script>
+    (function(){
+
+        document.getElementById("show-iframe").src = "zhaoping/";
+
+        document.getElementById("pre-button").onclick = function(e){
+
+            var iframewindow = showiframe.window;
+
+            iframewindow.toPerPage();
+        };
+
+        document.getElementById("next-button").onclick = function(e){
+
+            var iframewindow = showiframe.window;
+
+            iframewindow.toNextPage();
+        }
+
+    })()
+
+
 </script>
