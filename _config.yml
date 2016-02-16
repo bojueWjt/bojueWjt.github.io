@@ -10,7 +10,7 @@ title: Ninico
 subtitle: 一个工科文艺青年的页面仔人生
 email: jiataotx@163.com
 description: > # this means to ignore newlines until "baseurl:"
-  欢迎来到我的博客，这里记录了我对技术和生活的一些感悟，希望大家喜欢。
+  前端工程师，王嘉涛的个人博客。
 baseurl: "" # the subpath of your site, e.g. /blog
 zhihu:
   username: jiatao wang
