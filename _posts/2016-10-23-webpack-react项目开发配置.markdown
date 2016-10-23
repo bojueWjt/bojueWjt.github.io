@@ -115,7 +115,7 @@ Critical dependencies:
 
 
 ### 参考文章
-- [文章配置源码，github仓库](https://github.com/bojueWjt/webpack-learn)
+- [文章配置源码，github仓库](https://github.com/bojueWjt/webpack-learn/tree/master/002)
 - [Webpack 性能优化·1](http://code.oneapm.com/javascript/2015/07/07/webpack_performance_1/)
 - - [React 和 Webpack 小书](https://www.gitbook.com/book/wohugb/react-webpack-cookbook/details)
 
