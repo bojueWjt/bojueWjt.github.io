@@ -44,9 +44,7 @@ layout: page
             window.location.href = "http://ninico.top/project/" + param.projectName;
         }else{
 
-            $.get({
-                url:"projectParamConfig.json"
-            }).success(function(data){
+            $.get("projectParamConfig.json", function(data){
 
 
                 var projectInfo = data[param.projectName];
