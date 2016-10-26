@@ -47,7 +47,7 @@ layout: page
             $.get("projectParamConfig.json", function(data){
 
 
-                var projectInfo = data[param.projectName];
+                var projectInfo = JSON.parse(data)[param.projectName];
 
                 $("#show-iframe").attr("src",projectInfo.url)
 
