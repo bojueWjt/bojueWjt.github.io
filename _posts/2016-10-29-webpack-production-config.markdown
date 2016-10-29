@@ -150,7 +150,7 @@ main();
 
 ### 参考文章
 - [分离第三方库和多入口配置源码，github仓库](https://github.com/bojueWjt/webpack-learn/tree/master/003)
-- - [react-router配置源码，github仓库](https://github.com/bojueWjt/webpack-learn/tree/master/004)
+- [react-router配置源码，github仓库](https://github.com/bojueWjt/webpack-learn/tree/master/004)
 - [webpack: require.ensure与require AMD的区别](http://blog.csdn.net/zhbhun/article/details/46826129)
 - [React 和 Webpack 小书](https://www.gitbook.com/book/wohugb/react-webpack-cookbook/details)
 
