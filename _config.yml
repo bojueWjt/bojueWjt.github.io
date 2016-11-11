@@ -15,6 +15,7 @@ baseurl: "" # the subpath of your site, e.g. /blog
 zhihu:
   username: jiatao wang
   id: jiatao-wang-57
+beianhao: 粤ICP备16104207号-1
 github_username:  bojueWjt
 members:
   name: John Doe
