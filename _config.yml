@@ -8,6 +8,7 @@
 # Site settings
 title: Ninico
 subtitle: 一个工科文艺青年的页面仔人生
+keywords: ninico, 王嘉涛, 前端, react, redux
 email: jiataotx@163.com
 description: > # this means to ignore newlines until "baseurl:"
   前端工程师，王嘉涛的个人博客。
