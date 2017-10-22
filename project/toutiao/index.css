@@ -4,18 +4,19 @@ div {
 }
 
 .main {
-  padding-bottom: 160px;
+  padding-bottom: 160rem;
   width: 100%;
 }
 
 .main .index_header {
-  height: 150px;
+  height: 150rem;
 }
 
 .main .index_header .top_bar {
   width: 100%;
   height: 100%;
   background-image: url(./public/header_bg.png);
+  background-size: contain;
   text-align: center;
 }
 
@@ -23,17 +24,22 @@ div {
   background: url(./public/title.png) no-repeat right center;
   display: inline-block;
   height: 100%;
-  width: 200px;
-  margin-left: 83px;
+  width: 200rem;
+  margin-left: 83rem;
+  background-size: contain;
+}
+
+.main .index_header .top_bar .location img {
+  width: 18rem;
 }
 
 .main .index_header .top_bar .location {
   display: inline-block;
-  line-height: 150px;
+  line-height: 150rem;
   vertical-align: text-bottom;
-  font-size: 24px;
+  font-size: 24rem;
   color: #fff;
-  margin-left: 16px;
+  margin-left: 16rem;
 }
 
 .main .index_header .top_bar .location img {
@@ -41,15 +47,15 @@ div {
 }
 
 .main .top_menu_list {
-  height: 100px;
-  border-bottom: 1px solid #e5e5e5;
-  font-size: 40px;
+  height: 100rem;
+  border-bottom: 1rem solid #e5e5e5;
+  font-size: 40rem;
 }
 
 .main .top_menu_list a {
-  line-height: 100px;
-  padding: 0 24px;
-  margin-right: 12px;
+  line-height: 100rem;
+  padding: 0 24rem;
+  margin-right: 12rem;
 }
 
 .main .top_menu_list a.active {
@@ -61,40 +67,40 @@ div {
   content: ' ';
   display: block;
   background: #8f82bc;
-  width: 40px;
-  height: 8px;
+  width: 40rem;
+  height: 8rem;
   position: absolute;
   right: 50%;
-  margin-right: -20px;
-  margin-top: -8px;
+  margin-right: -20rem;
+  margin-top: -8rem;
 }
 
 .main .new_item {
-  margin: 0px 24px;
+  margin: 0rem 24rem;
 }
 
 .main .new_item a{
-  padding: 36px 0px;
+  padding: 36rem 0rem;
   display: block;
-  border-bottom: 1px solid #e5e5e5;
+  border-bottom: 1rem solid #e5e5e5;
   font-size: 0;
 }
 
 .main .new_item a .content {
   display: inline-block;
   width: 66%;
-  padding-right: 56px;
+  padding-right: 56rem;
 }
 
 .main .new_item .cover_thr {
-  margin-top: -16px;
-  margin-bottom: 16px;
+  margin-top: -16rem;
+  margin-bottom: 16rem;
 }
 
 .main .new_item .cover_large {
   overflow: hidden;
-  margin-top: -16px;
-  margin-bottom: 16px;
+  margin-top: -16rem;
+  margin-bottom: 16rem;
 }
 
 .main .new_item .cover_large img {
@@ -102,7 +108,7 @@ div {
 }
 
 .main .new_item .cover_thr ul {
-  font-size: 0px;
+  font-size: 0rem;
 }
 
 .main .new_item .cover_thr ul li {
@@ -111,7 +117,7 @@ div {
   width: 33.3%;
   box-sizing: border-box;
   overflow: hidden;
-  padding-right: 2px;
+  padding-right: 2rem;
 }
 
 .main .new_item .cover_thr ul li img {
@@ -121,7 +127,7 @@ div {
 .main .new_item a .cover {
   display: inline-block;
   width: 33.3%;
-  height: 150px;
+  height: 150rem;
   overflow: hidden;
 }
 
@@ -130,22 +136,22 @@ div {
 }
 
 .main .new_item h3 {
-  font-size: 40px;
-  margin-bottom: 24px;
+  font-size: 40rem;
+  margin-bottom: 24rem;
 }
 
 .main .new_item .meta {
-  font-size: 24px;
+  font-size: 24rem;
   color: #a0a0a0;
   position: relative;
 }
 
 .main .new_item .meta .tag {
   display: inline-block;
-  padding: 4px 8px;
-  border: 1px solid #8f82bc;
-  border-radius: 5px;
-  margin-right: 16px;
+  padding: 4rem 8rem;
+  border: 1rem solid #8f82bc;
+  border-radius: 5rem;
+  margin-right: 16rem;
 }
 
 .main .new_item .meta .tag.hot {
@@ -155,18 +161,19 @@ div {
 
 .main .new_item .meta .count {
   position: absolute;
-  right: 24px;
-  bottom: 8px;
+  right: 24rem;
+  bottom: 8rem;
 }
 
 .main .new_item .meta .count img {
-  margin-right: 8px;
+  margin-right: 8rem;
+  width: 28rem;
 }
 
 .main .bottom_nav_bar {
-  height: 110px;
-  font-size: 0px;
-  border-top: 1px solid #e5e5e5;
+  height: 110rem;
+  font-size: 0rem;
+  border-top: 1rem solid #e5e5e5;
   position: fixed;
   bottom: 0;
   width: 100%;
@@ -176,10 +183,10 @@ div {
 .main .bottom_nav_bar ul li {
   display: inline-block;
   width: 25%;
-  font-size: 24px;
+  font-size: 24rem;
   text-align: center;
   font-weight: bolder;
-  padding: 16px;
+  padding: 16rem;
   box-sizing: border-box;
   color: #707070;
 }
