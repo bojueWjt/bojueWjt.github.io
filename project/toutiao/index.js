@@ -13,19 +13,11 @@
 
   btm_nav.onclick = function(e) {
     var selectedTag;
-    console.log(e.path);
-    var i = 0;
 
-    for(var i = 0, len = e.path.length - 1; i < len; i++) {
-
-      if(e.path[i].nodeName.toLowerCase() == 'li') {
-        selectedTag = e.path[i];
-      }
-    }
-
-    if(selectedTag === undefined) {
-
-      return;
+    if(e.target.parentElement.nodeName.toLowerCase() == 'li') {
+      selectedTag = e.path[i];
+    }else {
+      selectedTag = e.target;
     }
 
     var selectedTag_svg = selectedTag.getElementsByTagName('path')[0];
