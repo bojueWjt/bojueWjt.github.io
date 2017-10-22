@@ -37,27 +37,4 @@
     btm_nav_active_svg.style.fill = "#707070";
     selectedTag_svg.style.fill = "#8f82bc";
   }
-
-//  修改viewport
-
-  var viewport = document.querySelector("meta[name=viewport]");
-  var winWidths= window.innerWidth;
-  var densityDpi=750/winWidths;
-      densityDpi= densityDpi>1?300*750*densityDpi/750:densityDpi;
-  if(isWeixin()){
-      viewport.setAttribute('content', 'width=750, target-densityDpi='+densityDpi);
-  }else{
-      viewport.setAttribute('content', 'width=750, user-scalable=no');
-      window.setTimeout(function(){
-          viewport.setAttribute('content', 'width=750, user-scalable=yes');
-      },1000);
-  }
-  function isWeixin(){
-      var ua = navigator.userAgent.toLowerCase();
-      if(ua.match(/MicroMessenger/i)=="micromessenger") {
-          return true;
-      } else {
-          return false;
-      }
-  }
 })()
