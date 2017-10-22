@@ -24,6 +24,10 @@
     var btm_nav_active = btm_nav.getElementsByClassName('active')[0]
     var btm_nav_active_svg = btm_nav_active.getElementsByTagName('path')[0];
 
+    if(!selectedTag_svg) {
+      return;
+    }
+
     btm_nav_active.className = '';
     selectedTag.className = 'active';
     btm_nav_active_svg.style.fill = "#707070";
