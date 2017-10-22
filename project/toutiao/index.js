@@ -15,7 +15,7 @@
     var selectedTag;
 
     if(e.target.parentElement.nodeName.toLowerCase() == 'li') {
-      selectedTag = e.path[i];
+      selectedTag = e.target.parentElement;
     }else {
       selectedTag = e.target;
     }
