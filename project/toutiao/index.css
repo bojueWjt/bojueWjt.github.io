@@ -14,7 +14,8 @@ div {
 .main .index_header .top_bar {
   width: 100%;
   height: 100%;
-  background-image: url(./public/header_bg.png);
+  background: url(./public/header_bg.png) no-repeat right center;
+  background-size: cover;
   text-align: center;
 }
 
