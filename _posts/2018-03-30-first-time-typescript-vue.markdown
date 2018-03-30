@@ -6,7 +6,7 @@ categorise: vue typescript
 
 TypeScript是JavaScript的静态语言超集，配合上工具可以让我们在编译前，就发现程序中的错误。严格的语法校验可以控制代码质量，特别适合在大型、研发周期长、多人协作的项目中使用。可以有减少程序代码熵值的扩大速度。
 
-## Boss项目的TypeScript的环境搭建
+##TypeScript的环境搭建
 这里Vue在2.5以后的版本中，在Vue-Cli中集成了拥有Typescript环境的项目模版，可以直接生成，开箱即用还是很方便的。
 
 ## 关于Typescript的依赖库介绍
