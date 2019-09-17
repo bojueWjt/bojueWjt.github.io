@@ -287,7 +287,7 @@ app.listen(config.dev.mockServerPort, 'localhost', function() {
     console.log('mock 服务运行在端口' + config.dev.mockServerPort)
 })
 {% endhighlight %}
-在mockServer中主要有两个逻辑，一个是获取在mockServer中配置的api列表，前端拿到这个列表会在ajax中对列表中的api加上{% endhighlight %}/_mock_req_{% endhighlight %}的前缀。为系统的网络代理提供转发的标识。
+在mockServer中主要有两个逻辑，一个是获取在mockServer中配置的api列表，前端拿到这个列表会在ajax中对列表中的api加上 **/_mock_req_** 的前缀。为系统的网络代理提供转发的标识。
   {% highlight javascript %}
 /***
 ** mock数据配置文件示例
