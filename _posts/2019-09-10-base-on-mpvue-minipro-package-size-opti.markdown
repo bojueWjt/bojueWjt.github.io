@@ -7,19 +7,24 @@ title: 基于mpvue的小程序包大小优化总结
   开发立新二手车小程序（以下简称门店小程序），车辆管理需求的过程中发现，门店小程序的包体积大小过大。其中生成环境1380kb，开发环境2839kb。
 #### 1.1 主包大小对生产环境
   之前我们为了优化包的体积大小，做了一次本地图片上cdn。但显然生产环境中的主包大小，已经接近小程序对于主包大小2M的限制条件，不利于我们后面新业务的开发上新。而且主包的提交大小也影响了用户打开小程序的速度，和小程序运行时所占用的系统内存。一般来说小程序的主包控制在1M，可以让用户在1s内打开小程序。
-#### 1.1.1 小程序的启动步骤
+#### 1.2 小程序的启动步骤
   ![小程序的启动步骤图示](http://ninico.top/img/minipro-package-size-optizition/the-step.png)
   包的大小将直接影响，第一步资源准备和第二步业务代码注入和渲染的速度。
-#### 1.2 主包大小对生产环境
+#### 1.3 主包大小对生产环境
   开发环境中的主包大小已经超过了限制条件，开发过程中无法进行小程序预览调试，真机中的预览调试，每次都需要进行一次压缩打包，影响了开发效率。
 ### 2. 分析mpvue打包后的主包大小组成部分
-  因为开发环境中的打包结果相较于生产环境中，只多不少。所以以下分析我们全部以开发环境下来分析，
-  --------
+
+因为开发环境中的打包结果相较于生产环境中，只多不少。所以以下分析我们全部以开发环境下来分析，
+
   mpvue将每个注册的page作为webpack打包的入口，同时也会将系统中引入的公共库或者引入次数较多的文件，打包到一个公有代码文件中。其中在我们的项目中使用到了一个自有的小程序组件库，在webpack的打包构成中也会引入进来。
+
 #### 2.1 mpvue打包后的包结构
+
   ![mpvue打包的最终文件夹](http://ninico.top/img/minipro-package-size-optizition/mp-dist-dir.jpeg)
   这里除了pages业务分包文件夹，其他的文件都是主包的内容。但是不用担心，这里我们只看common、static两个文件夹就可以了。因为这两个文件夹一个公共库提取的部分，一个自有小程序组件的部分。占到了主包体积的84%
+  
 #### 2.2 common中的vendor.js
+
   vendor.js是common的主体部分，是通过webpack的CommonsChunkPlugin插件提取出来的公有库文件。
   我们来看webpack的包分析插件BundleAnalyzerPlugin给出的分析结果。
   ![BundleAnalyzerPlugin分析结果](http://ninico.top/img/minipro-package-size-optizition/bundle-analyzer.jpeg)
@@ -219,7 +224,7 @@ Object.assign(global, {
   这里我们将判断是否需要打入公共包的判断条件改一下，在node_modules的判断中加上一个限制:count > 1,这样只有被引入过两次的node_modules包才会被打入到公共的js包中。这样echarts就只会被打包到使用到它的分包中了。
   --- --- 
   然而echart只是在车辆估计参考中，一个线性的统计图里用到了。我觉得echarts在这里有点大才小用了，其实我们完全可以自己用canvas，来实现这里的线性统计图的需求。而现在打开查看参考估价，我们可以感受到明显的等待时间。所以这里是可以进一步优化的。
-  ### 5. mockjs脱离出开发环境下的主包
+  ### 5 mockjs脱离出开发环境下的主包
   这里我的处理方式是，新建一个node.js的服务来提供mockjs的模拟数据，代替mockjs在本地拦截http请求制造mock数据的方式。
   #### 5.1 node端的代码实现
   {% highlight javascript %}
@@ -382,8 +387,10 @@ module.exports = connectMockRules(
 )
 
 {% endhighlight %}
-  #### 5.2 前端的代码实现
-  {% highlight javascript %}
+
+#### 5.2 前端的代码实现
+
+{% highlight javascript %}
 // 项目中封装的小程序http
 this.$http = (url, data, options) => {
   let isMocking
