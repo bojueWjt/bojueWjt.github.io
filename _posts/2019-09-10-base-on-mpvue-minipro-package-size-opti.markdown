@@ -579,7 +579,7 @@ const cvux = [
   }
   ...
 {% endhighlight %}
-我们可以看到{% endhighlight %}"parent": "110100"{% endhighlight %}这一条就出现了很多次。我发现wxapp-lui中的address组件，在逻辑上对与格式并不是很依赖。直接把它的数据源改成后台的源数据。
+我们可以看到```"parent": "110100"```这一条就出现了很多次。我发现wxapp-lui中的address组件，在逻辑上对与格式并不是很依赖。直接把它的数据源改成后台的源数据。
   {% highlight javascript %}
 {
   86: {
