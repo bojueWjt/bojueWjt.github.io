@@ -5,7 +5,7 @@ categorise: webpack
 ---
 
 最近在写的一个旧项目，发现项目在机器上面的编译速度很慢。第一次编译费时基本在80s的时间左右，修改后重新构建的速度也很慢。基本是需要在20s左右，个别可能会有80s才重新构建完成的情况。很影响开发的效率，所以尝试了一些优化工作，在这里分享给大家。
-![优化前的webpack,编译后控制台打印的信息](http://ninico.top/img/webpack-optizition/webpack-optizition-01.jpeg)
+![优化前的webpack,编译后控制台打印的信息](http://balen.wang/img/webpack-optizition/webpack-optizition-01.jpeg)
 ## 现有能观察到的问题
 1. LoaderUtils.parseQuery() 的警告信息。
 2. webpack,webpack-dev-middleware版本落后。
@@ -20,7 +20,7 @@ categorise: webpack
 进行升级后我们的第一次编译时间已经缩减到55s左右了。重新构建时间在7s左右。控制台也得到了更详尽的编译信息。效果还是比较明显的。
 
 ## 对新得到的详尽的编译信息进行分析
-![](http://ninico.top/img/webpack-optizition/webpack-optizition-02.jpeg)
+![](http://balen.wang/img/webpack-optizition/webpack-optizition-02.jpeg)
 以上是耗时时间较长的编译项，我挑选了几个我比较关注的内容
 1. report模块的编译时间有4s这么多，应该是raven-js本身的体积就比较大，但是在开发环境编译下，引入report是不必要的。
 2. element-ui和vue.esm编译也花了很长时间。
@@ -62,7 +62,7 @@ lodash有多个库依赖，引入使用方式也不同，也不适用resolve.ali
 
 
 ### 修改css-loader的版本为0.14.5
-css-loader v0.14.5以上的版本编译速度比较慢。具体可以查看这个[Issues](http://ninico.top/img/webpack-optizition/webpack-optizition-03.jpeg)。不过这个修改会产生前面提过的LoaderUtils.parseQuery() 的警告信息。但是效果确实很明显，第一次的构建速度可以减少4s的时间。
+css-loader v0.14.5以上的版本编译速度比较慢。具体可以查看这个[Issues](http://balen.wang/img/webpack-optizition/webpack-optizition-03.jpeg)。不过这个修改会产生前面提过的LoaderUtils.parseQuery() 的警告信息。但是效果确实很明显，第一次的构建速度可以减少4s的时间。
 
 ## 更进一步的修改
 

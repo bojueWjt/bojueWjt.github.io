@@ -8,7 +8,7 @@ title: 基于mpvue的小程序包大小优化总结
 #### 1.1 主包大小对生产环境
   之前我们为了优化包的体积大小，做了一次本地图片上cdn。但显然生产环境中的主包大小，已经接近小程序对于主包大小2M的限制条件，不利于我们后面新业务的开发上新。而且主包的提交大小也影响了用户打开小程序的速度，和小程序运行时所占用的系统内存。一般来说小程序的主包控制在1M，可以让用户在1s内打开小程序。
 #### 1.2 小程序的启动步骤
-  ![小程序的启动步骤图示](http://ninico.top/img/minipro-package-size-optizition/the-step.png)
+  ![小程序的启动步骤图示](http://balen.wang/img/minipro-package-size-optizition/the-step.png)
   包的大小将直接影响，第一步资源准备和第二步业务代码注入和渲染的速度。
 #### 1.3 主包大小对生产环境
   开发环境中的主包大小已经超过了限制条件，开发过程中无法进行小程序预览调试，真机中的预览调试，每次都需要进行一次压缩打包，影响了开发效率。
@@ -20,14 +20,14 @@ title: 基于mpvue的小程序包大小优化总结
 
 #### 2.1 mpvue打包后的包结构
 
-  ![mpvue打包的最终文件夹](http://ninico.top/img/minipro-package-size-optizition/mp-dist-dir.jpeg)
+  ![mpvue打包的最终文件夹](http://balen.wang/img/minipro-package-size-optizition/mp-dist-dir.jpeg)
   这里除了pages业务分包文件夹，其他的文件都是主包的内容。但是不用担心，这里我们只看common、static两个文件夹就可以了。因为这两个文件夹一个公共库提取的部分，一个自有小程序组件的部分。占到了主包体积的84%
   
 #### 2.2 common中的vendor.js
 
   vendor.js是common的主体部分，是通过webpack的CommonsChunkPlugin插件提取出来的公有库文件。
   我们来看webpack的包分析插件BundleAnalyzerPlugin给出的分析结果。
-  ![BundleAnalyzerPlugin分析结果](http://ninico.top/img/minipro-package-size-optizition/bundle-analyzer.jpeg)
+  ![BundleAnalyzerPlugin分析结果](http://balen.wang/img/minipro-package-size-optizition/bundle-analyzer.jpeg)
   右边的src是业务逻辑里面使用到的公有库代码不是我们的优化的目标，我们看到node_modules一共是1.51M的体积，是我们重点要处理的，但是这里bundle-analyzer给出的分析是很不详细而且是不准确的，比如说core-js（babel的语法垫片）体积只有71kb在这里确是图示的一半。
 #### 2.3 CommonsChunkPlugin
   CommonsChunkPlugin是webpack在打包时用力提取公共代码的插件。
@@ -422,7 +422,7 @@ this.$http = (url, data, options) => {
 
 #### 5.3 MacOs环境下代理工具charls的配置
 配置如下
-![charls](http://ninico.top/img/minipro-package-size-optizition/charls-config.png)
+![charls](http://balen.wang/img/minipro-package-size-optizition/charls-config.png)
 #### 5.4 使用时候的注意事项
 1. 微信开发者工具： 设置-代理设置-使用系统代理
 2. charls代理已开启
