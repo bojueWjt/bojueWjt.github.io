@@ -74,7 +74,7 @@
         default:
             break
         }
-        console.log("ninico");
+        console.log("balen");
         if (flag) {
             hideErrorInfo(errorInfo)
         }

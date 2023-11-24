@@ -9,7 +9,7 @@
 *
 * 纯手打 版权©所有伯爵科技
 *
-* author:ninico
+* author:balen
 */
 
 (function(){
